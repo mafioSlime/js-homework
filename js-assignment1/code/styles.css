@@ -1,0 +1,114 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+GENERAL 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.container {
+    max-width: 900px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+NAV 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+nav {
+    border-bottom: 1px solid #ededed;
+}
+
+.navbar > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .container ul {
+    display: flex;
+}
+
+nav .container ul li {
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.logo {
+    background: url('./img/logo.svg');
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+@media (max-width: 600px) {
+    nav .container {
+        padding: 0 30px;
+    }
+
+    nav .container ul {
+        display: none;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+CARDS
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Your styles go here */
+
+
+
+.container {
+    max-width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    
+}
+
+.card-row {
+    width: 300px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: royalblue;
+    color: #fff;
+    padding: 0.6rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+
+.card-row span {
+    font-weight: lighter;
+}
+
+
+.card-row span {
+    padding-bottom: 0.5rem;
+    grid-row-start: -5
+}
+
+.card-row h2 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+
+.card-row p {
+    color: #fff;
+    padding-bottom: 0.5rem;   
+    grid-row-start: 5;
+    
+    
+}
