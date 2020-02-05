@@ -1,6 +1,5 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-GENERAL 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* General */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +20,8 @@ a {
     color: #000;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-NAV 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Nav */
+
 nav {
     border-bottom: 1px solid #ededed;
 }
@@ -62,32 +60,41 @@ nav .container ul li {
     }
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-CARDS
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* Your styles go here */
+/* Cards */
 
+section {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
+    section .container:nth-child(1) {
+        transform: translateX(25px);
+    }
 
 .container {
-    max-width: 70%;
+    max-width: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5rem;
-    
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+
 }
 
 .card-row {
     width: 300px;
-    height: 270px;
+    height: 300px;
     border-radius: 15px;
     background-color: royalblue;
     color: #fff;
-    padding: 0.6rem;
+    padding: 1.4rem;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);    
 }
 
 .card-row span {
@@ -114,4 +121,20 @@ CARDS
     margin-bottom: 1rem;
     font-weight: bolder;
     cursor: pointer
+}
+
+
+@media (max-width: 1150px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    
+        
+    }
 }

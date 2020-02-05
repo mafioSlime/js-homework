@@ -4,9 +4,6 @@ const brown = 'rgba(205,164, 133, 1)'
 const greenblue = 'rgba(62,171, 201, 1)'
 const pink = 'rgba(254,156, 161, 1)'
 const blue = 'rgba(98,189, 254, 1)'
-const card = document.querySelectorAll('.card-row')
-
-
 
 
 const data = [
@@ -48,14 +45,16 @@ const data = [
     }
 ]
 
+const card = document.querySelectorAll('.card-row') // We are making references to ALL of the cards from html.
+
+
+// This will allow us to generate background colors from each object to our cards.
 
 const generateColor = () => {
     data.forEach((info, i) => {
         card[i].style.backgroundColor = `${info.color}`
     })
 }
-
-
 
 
 data.forEach((info, i) => {  
@@ -66,5 +65,6 @@ data.forEach((info, i) => {
     `   
     generateColor()
 })
+
 
 
