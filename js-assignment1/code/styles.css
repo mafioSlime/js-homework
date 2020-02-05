@@ -105,10 +105,13 @@ CARDS
     line-height: 1.6rem;
 }
 
-.card-row p {
-    color: #fff;
-    padding-bottom: 0.5rem;   
+
+.card-row button {
+    width: 50%;
     grid-row-start: 5;
-    
-    
+    border: none;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    cursor: pointer
 }

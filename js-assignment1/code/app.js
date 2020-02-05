@@ -8,6 +8,7 @@ const card = document.querySelectorAll('.card-row')
 
 
 
+
 const data = [
     {
         topic: 'Food',
@@ -48,11 +49,22 @@ const data = [
 ]
 
 
+const generateColor = () => {
+    data.forEach((info, i) => {
+        card[i].style.backgroundColor = `${info.color}`
+    })
+}
+
+
+
+
 data.forEach((info, i) => {  
     card[i].innerHTML += `
     <span>${info.topic}</span>
     <h2>${info.title}</h2>
-    <p> Read for ${info.price}</p>
-    `
-
+    <button> Read for ${info.price}</button>
+    `   
+    generateColor()
 })
+
+
