@@ -45,26 +45,48 @@ const data = [
     }
 ]
 
-const card = document.querySelectorAll('.card-row') // We are making references to ALL of the cards from html.
+// const card = document.querySelectorAll('.card-row') // We are making references to ALL of the cards from html.
+   const cardContainer = document.querySelector('.card-container')
+   let html = ''
+
+   data.forEach(info => {
+       html = `
+       <div class="card-row" style="background-color: ${info.color}">
+       <span>${info.topic}</span>
+       <h3>${info.title}</h3>
+       <button>Read for ${info.price}</button>
+       </div>
+       `
+
+       cardContainer.innerHTML += html
+   })
+  
+ 
+
+
+
+
+
+
 
 
 // This will allow us to generate background colors from each object to our cards.
 
-const generateColor = () => {
-    data.forEach((info, i) => {
-        card[i].style.backgroundColor = `${info.color}`
-    })
-}
+// const generateColor = () => {
+//     data.forEach((info, i) => {
+//         card[i].style.backgroundColor = `${info.color}`
+//     })
+// }
 
 
-data.forEach((info, i) => {  
-    card[i].innerHTML += `
-    <span>${info.topic}</span>
-    <h2>${info.title}</h2>
-    <button> Read for ${info.price}</button>
-    `   
-    generateColor()
-})
+// data.forEach((info, i) => {  
+//     card[i].innerHTML += `
+//     <span>${info.topic}</span>
+//     <h2>${info.title}</h2>
+//     <button> Read for ${info.price}</button>
+//     `   
+//     generateColor()
+// })
 
 
 
